@@ -59,12 +59,16 @@ for (let i = 0; i < team.length; i++) {
     // -in each element add the object properties as strings
     memberData.append(`${member.name}`);
     memberData.append(`${member.role}`);
-    memberData.append(`${member.image}`);
+    // memberData.append(`${member.image}`);    
     
-}
+    
+    // - BONUS 1:
+    // -edit the image string as an element img
+    const memberImage = document.createElement('img');
+    memberImage.src = `./assets/img/${member.image}`;
+    container.append(memberImage);
 
-// - BONUS 1:
-// -edit the image string as an element img
+};
 
 // - BONUS 2:
 // -edit html and css as the screenshot
