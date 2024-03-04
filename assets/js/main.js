@@ -46,8 +46,22 @@ for (let i = 0; i < team.length; i++) {
 
 // - MILESTONE 2:
 // -select the elemnt in the DOM where to print the data
+const container = document.querySelector('.container');
+
 // -in a for loop create an element for each object of the array to print inside the properties
-// -in each element add the object properties as strings
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+
+    let memberData = document.createElement('div');
+
+    container.append(memberData);
+
+    // -in each element add the object properties as strings
+    memberData.append(`${member.name}`);
+    memberData.append(`${member.role}`);
+    memberData.append(`${member.image}`);
+    
+}
 
 // - BONUS 1:
 // -edit the image string as an element img
