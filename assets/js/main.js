@@ -81,7 +81,8 @@ for (let i = 0; i < team.length; i++) {
     const member = team[i];
 
     let memberData = document.createElement('div');
-    memberData.classList.add('col-4');
+    memberData.classList.add('col');
+    memberData.classList.add('col-md-4');
 
     row.append(memberData);
 
