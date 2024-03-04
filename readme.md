@@ -30,7 +30,7 @@ organizzare i singoli membri in card/schede
 -edit the image string as an element img
 
 - BONUS 2:
--edit html and css as the screenshot
+-edit html and css as the screenshot adding bootstrap
 -edit the element wich contain the object properties as a card
 
 ## Tools
@@ -40,3 +40,4 @@ organizzare i singoli membri in card/schede
 -for loop
 -for in
 -cons / let
+-bootstrap

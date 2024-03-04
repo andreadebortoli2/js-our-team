@@ -42,14 +42,14 @@ for (let i = 0; i < team.length; i++) {
     // - console. log with the dot notation
     console.log(member.name, member.role, member.image);
     
-}
+};
 
 // - MILESTONE 2:
 // -select the elemnt in the DOM where to print the data
-const container = document.querySelector('.container');
+// const container = document.querySelector('.container');
 
 // -in a for loop create an element for each object of the array to print inside the properties
-for (let i = 0; i < team.length; i++) {
+/* for (let i = 0; i < team.length; i++) {
     const member = team[i];
 
     let memberData = document.createElement('div');
@@ -68,8 +68,43 @@ for (let i = 0; i < team.length; i++) {
     memberImage.src = `./assets/img/${member.image}`;
     container.append(memberImage);
 
-};
+}; */
 
 // - BONUS 2:
-// -edit html and css as the screenshot
+// -edit html and css as the screenshot  adding bootstrap
 // -edit the element wich contain the object properties as a card
+
+const row = document.querySelector('.row');
+row.classList.add('gy-4');
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+
+    let memberData = document.createElement('div');
+    memberData.classList.add('col-4');
+
+    row.append(memberData);
+
+    const memberCard = document.createElement('div');
+    memberCard.classList.add('card', 'p-1', 'text-center');
+
+    memberData.append(memberCard);
+    
+    
+    const memberCardImage = document.createElement('img');
+    memberCardImage.src = `./assets/img/${member.image}`;
+
+    const memberCardTitle = document.createElement('h5');
+    memberCardTitle.classList.add('card-title', 'pt-3');
+
+    const memberCardText = document.createElement('p');
+    memberCardText.classList.add('card-text');
+
+    memberCardTitle.append(`${member.name}`);
+    memberCardText.append(`${member.role}`);  
+
+    memberCard.append(memberCardImage);
+    memberCard.append(memberCardTitle);
+    memberCard.append(memberCardText);
+    
+};
